@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SettingsViewController: UIViewController {
 
@@ -15,13 +16,23 @@ class SettingsViewController: UIViewController {
     }
 
     @IBAction func logoutUser(_ sender: Any) {
-        performSegue(withIdentifier: "toLoginVC", sender: nil)
+        do {
+            try Auth.auth().signOut()
+            performSegue(withIdentifier: "toLoginVC", sender: nil)
+        }
+        catch {
+            createAlert(titleParam: "Signout Error", messageParam: "Something went wrong while signing out. Please try again.")
+        }
     }
     
     @IBAction func aboutApp(_ sender: Any) {
-        let message = UIAlertController(title: "About", message: "This app was written in Xcode using Storyboard.", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        message.addAction(okAction)
-        present(message, animated: true, completion: nil)
+        createAlert(titleParam: "About", messageParam: "This app was written in Xcode using Storyboard.")
+    }
+    
+    func createAlert(titleParam: String, messageParam: String) {
+        let message = UIAlertController(title: titleParam, message: messageParam, preferredStyle: .alert)
+        let confirmBtn = UIAlertAction(title: "OK", style: .default, handler: nil)
+        message.addAction(confirmBtn)
+        self.present(message, animated: true, completion: nil)
     }
 }
