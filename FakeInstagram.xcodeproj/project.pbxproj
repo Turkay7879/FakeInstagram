@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,10 @@
 		E084334227C16CFA00998BC0 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E084334127C16CFA00998BC0 /* NewPostViewController.swift */; };
 		E084334527C16D1C00998BC0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E084334427C16D1C00998BC0 /* SettingsViewController.swift */; };
 		E084334A27C16DDA00998BC0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E084334927C16DD900998BC0 /* GoogleService-Info.plist */; };
+		E084335027C1757F00998BC0 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = E084334F27C1757F00998BC0 /* FirebaseStorage */; };
+		E084335227C1757F00998BC0 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E084335127C1757F00998BC0 /* FirebaseAuth */; };
+		E084335427C1757F00998BC0 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E084335327C1757F00998BC0 /* FirebaseFirestore */; };
+		E084335627C1757F00998BC0 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = E084335527C1757F00998BC0 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +43,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E084335027C1757F00998BC0 /* FirebaseStorage in Frameworks */,
+				E084335227C1757F00998BC0 /* FirebaseAuth in Frameworks */,
+				E084335427C1757F00998BC0 /* FirebaseFirestore in Frameworks */,
+				E084335627C1757F00998BC0 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +103,12 @@
 			dependencies = (
 			);
 			name = FakeInstagram;
+			packageProductDependencies = (
+				E084334F27C1757F00998BC0 /* FirebaseStorage */,
+				E084335127C1757F00998BC0 /* FirebaseAuth */,
+				E084335327C1757F00998BC0 /* FirebaseFirestore */,
+				E084335527C1757F00998BC0 /* FirebaseAnalyticsWithoutAdIdSupport */,
+			);
 			productName = FakeInstagram;
 			productReference = E084332527C169B600998BC0 /* FakeInstagram.app */;
 			productType = "com.apple.product-type.application";
@@ -122,6 +136,9 @@
 				Base,
 			);
 			mainGroup = E084331C27C169B600998BC0;
+			packageReferences = (
+				E084334E27C1757F00998BC0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = E084332627C169B600998BC0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -357,6 +374,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E084334E27C1757F00998BC0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.12.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E084334F27C1757F00998BC0 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E084334E27C1757F00998BC0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		E084335127C1757F00998BC0 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E084334E27C1757F00998BC0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		E084335327C1757F00998BC0 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E084334E27C1757F00998BC0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		E084335527C1757F00998BC0 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E084334E27C1757F00998BC0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E084331D27C169B600998BC0 /* Project object */;
 }
