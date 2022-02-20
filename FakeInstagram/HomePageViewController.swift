@@ -35,7 +35,9 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
     
     func getHomeFeedData() {
         let firestoreDB = Firestore.firestore()
-        firestoreDB.collection("Posts").addSnapshotListener { (snapshot, err) in
+        firestoreDB.collection("Posts")
+            .order(by: "postTime", descending: true)
+            .addSnapshotListener { (snapshot, err) in
             if err != nil {
                 self.createAlert(alertTitle: "Failed Loading Home", alertMessage: "An error occured while loading your home feed. Please try again later.")
             }
