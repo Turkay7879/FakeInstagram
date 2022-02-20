@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E06BB93227C28A8C00812A5C /* HomeFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06BB93127C28A8C00812A5C /* HomeFeedTableViewCell.swift */; };
+		E06BB93627C2900D00812A5C /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06BB93527C2900D00812A5C /* PostData.swift */; };
+		E06BB93A27C297C000812A5C /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = E06BB93927C297C000812A5C /* SDWebImage */; };
 		E084332927C169B600998BC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E084332827C169B600998BC0 /* AppDelegate.swift */; };
 		E084332B27C169B600998BC0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E084332A27C169B600998BC0 /* SceneDelegate.swift */; };
 		E084332D27C169B600998BC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E084332C27C169B600998BC0 /* ViewController.swift */; };
@@ -24,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E06BB93127C28A8C00812A5C /* HomeFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedTableViewCell.swift; sourceTree = "<group>"; };
+		E06BB93527C2900D00812A5C /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		E084332527C169B600998BC0 /* FakeInstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FakeInstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E084332827C169B600998BC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E084332A27C169B600998BC0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +52,7 @@
 				E084335227C1757F00998BC0 /* FirebaseAuth in Frameworks */,
 				E084335427C1757F00998BC0 /* FirebaseFirestore in Frameworks */,
 				E084335627C1757F00998BC0 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				E06BB93A27C297C000812A5C /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +82,7 @@
 				E084332A27C169B600998BC0 /* SceneDelegate.swift */,
 				E084332C27C169B600998BC0 /* ViewController.swift */,
 				E084333D27C16CB200998BC0 /* HomePageViewController.swift */,
+				E06BB93127C28A8C00812A5C /* HomeFeedTableViewCell.swift */,
 				E084334127C16CFA00998BC0 /* NewPostViewController.swift */,
 				E084334427C16D1C00998BC0 /* SettingsViewController.swift */,
 				E084332E27C169B600998BC0 /* Main.storyboard */,
@@ -83,6 +90,7 @@
 				E084333327C169B900998BC0 /* LaunchScreen.storyboard */,
 				E084333627C169B900998BC0 /* Info.plist */,
 				E084334927C16DD900998BC0 /* GoogleService-Info.plist */,
+				E06BB93527C2900D00812A5C /* PostData.swift */,
 			);
 			path = FakeInstagram;
 			sourceTree = "<group>";
@@ -108,6 +116,7 @@
 				E084335127C1757F00998BC0 /* FirebaseAuth */,
 				E084335327C1757F00998BC0 /* FirebaseFirestore */,
 				E084335527C1757F00998BC0 /* FirebaseAnalyticsWithoutAdIdSupport */,
+				E06BB93927C297C000812A5C /* SDWebImage */,
 			);
 			productName = FakeInstagram;
 			productReference = E084332527C169B600998BC0 /* FakeInstagram.app */;
@@ -138,6 +147,7 @@
 			mainGroup = E084331C27C169B600998BC0;
 			packageReferences = (
 				E084334E27C1757F00998BC0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				E06BB93827C297C000812A5C /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = E084332627C169B600998BC0 /* Products */;
 			projectDirPath = "";
@@ -168,7 +178,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E084333E27C16CB200998BC0 /* HomePageViewController.swift in Sources */,
+				E06BB93627C2900D00812A5C /* PostData.swift in Sources */,
 				E084332D27C169B600998BC0 /* ViewController.swift in Sources */,
+				E06BB93227C28A8C00812A5C /* HomeFeedTableViewCell.swift in Sources */,
 				E084332927C169B600998BC0 /* AppDelegate.swift in Sources */,
 				E084332B27C169B600998BC0 /* SceneDelegate.swift in Sources */,
 				E084334227C16CFA00998BC0 /* NewPostViewController.swift in Sources */,
@@ -376,6 +388,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E06BB93827C297C000812A5C /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.12.3;
+			};
+		};
 		E084334E27C1757F00998BC0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -387,6 +407,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E06BB93927C297C000812A5C /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E06BB93827C297C000812A5C /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
 		E084334F27C1757F00998BC0 /* FirebaseStorage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E084334E27C1757F00998BC0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
